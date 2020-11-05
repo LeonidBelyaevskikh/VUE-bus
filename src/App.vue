@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Component1 class="component"/>
+    <Component2 class="component"/>
+    <Component3 class="component"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Component1 from "./components/Component1";
+import Component2 from "./components/Component2";
+import Component3 from "./components/Component3";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Component3,
+    Component2,
+    Component1
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .component {
+    width: 30%;
+    height: 150px;
+    background-color: gold;
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    line-height: 150px;
+  }
 </style>
